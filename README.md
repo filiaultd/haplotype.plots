@@ -4,10 +4,10 @@ R scripts for making haplotype plots around GWAS candidate genes in *A. thaliana
 
 
 ## A. Things you need to start:
-1.  The ***fastPHASE*** program <sup id="a1">[1](#f1)</sup>.  It’s easiest if this is in your $PATH, of course.  To download, see link in **Resources** below.  Change the name of the binary to “fastphase” (or change the relevant line in the runFastphase function to reflect the name of your fastphase binary).
+1.  The ***fastPHASE*** program <sup id="a1">[1](#f1)</sup>.  It’s easiest if this is in your $PATH, of course.  To download, see link in **C. Resources** below.  Change the name of the binary to “fastphase” (or change the relevant line in the runFastphase function to reflect the name of your fastphase binary).
 2.  ***R*** and a basic knowledge of how to manage your own directories in R.  Work each fastPHASE analysis that you want to do in its own unique directory.  The analysis will generate a lot of intermediate files!  If you run fastPHASE twice in the same directory, it WILL overwrite the previous analysis (at least as it’s set up now - this can be changed.  See me...).
-3.  The R function file **fastPHASE.functions.R**, which includes the R functions ***csvToFastphase***, ***runFastphase***, ***parseFastphase***, ***plotFastphase***.  You will need to source these functions: see “running.fastPHASE.R” for an example.
-4.  The R file **running.fastPHASE.R** which shows an example of how to use the functions in the function file.
+3.  The R function file ***fastPHASE.functions.R***, which includes the R functions ***csvToFastphase***, ***runFastphase***, ***parseFastphase***, ***plotFastphase***.  You will need to source these functions: see “running.fastPHASE.R” for an example.
+4.  The R file ***running.fastPHASE.R*** which shows an example of how to use the functions in the function file.
 5.  SNP data (as a .csv)
     * A.  Use unimputed data ONLY.  Call method 74 (unimputed 250K SNP data, 1000+ worldwide accessions) or resequencing data (unimputed SNPs, 200+ Swedish accessions, or Fernando’s unimputed 1001g SNP calls) are good choices.
     * B.  From this data, pull out a subset of SNPs that corresponds to the desired window around your gene (or area) of interest.  I recommend starting with a window size of at least +/- 50kb (if not 100kb).  This window may seem large, but it will give you a good feeling for what’s going on in the region.  It is much easier to start with a large window and then zoom in if needed!
